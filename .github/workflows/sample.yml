@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
-        run: echo "Hello, ${{ github.event.inputs.refs }}"
+        run: echo "Hello, ${{ github.event.inputs.ref }}"
