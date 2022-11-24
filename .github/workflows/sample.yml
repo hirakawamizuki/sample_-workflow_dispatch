@@ -1,10 +1,16 @@
 name: Sample
 
-on: push
+on: 
+  workflow_dispatch:
+    inputs:
+      refs:
+        required: false
+        description: "ブランチ名 or タグ名 or Commit SHA"
+        default: master
 
 jobs:
   sample-job:
     runs-on: ubuntu-latest
     steps:
       - name: greeting
-        run: echo Hello!
+        run: echo "Hello, ${{ github.event.inputs.refs }}"
