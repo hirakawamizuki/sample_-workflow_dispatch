@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Hello, main"
+echo "Hello, develop"
