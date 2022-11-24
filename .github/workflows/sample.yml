@@ -12,5 +12,8 @@ jobs:
   sample-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3  
       - name: greeting
-        run: echo "Hello, ${{ github.event }}"
+        run: |
+          chmod +x greeting.sh
+          ./greeting.sh
